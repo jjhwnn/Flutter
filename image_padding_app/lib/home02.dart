@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           "Image Padding"
         ),
       ),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView(  // 스크롤 기능
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
