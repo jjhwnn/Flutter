@@ -16,7 +16,7 @@ class MySnackBar extends StatelessWidget {
                 const SnackBar(
                   content: Text('Elevated Button is clicked'),
                   duration: Duration(seconds: 2),
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color.fromARGB(255, 91, 127, 156),
                 ),
               );
             },
