@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+ //statelessWidget : 상태변화가 없는 위젯 
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { 
   const MyApp({Key? key}) : super(key: key);
 
   @override
