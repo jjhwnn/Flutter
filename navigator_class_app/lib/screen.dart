@@ -30,7 +30,7 @@ class Screen extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.red)
               ),
                child: const Text('Go to the screen #2')
-               ),
+            ),
           ],
         ),
       ),
