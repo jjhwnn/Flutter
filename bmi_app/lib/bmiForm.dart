@@ -47,7 +47,7 @@ class _MeasureBmiState extends State<MeasureBmi> {
                 TextField(
                   controller: weight,
                   decoration: const InputDecoration(labelText: '체중(kg)을 입력하세요'),
-                  keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.text,
                 ),
                 const SizedBox(
                   height: 20,
