@@ -30,13 +30,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   late TextEditingController textEditingController;
   late String character;
   late List str;
   late int index;
-  late String  charactera;
- 
 
   @override
   void initState() {
@@ -45,11 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
     textEditingController = TextEditingController();
     str = [];
     index = -1;
-    charactera="";
 
     Timer.periodic(const Duration(seconds: 1), (Timer timer) {
-       sumStr();
-     });
+      sumStr();
+    });
   }
 
   @override
@@ -99,8 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.of(context).pop();
                     setState(() {
-                      charactera = textEditingController.text;
-                      str = charactera.split('');
+                      str = textEditingController.text.split('');
                     });
                   },
                   child: const Text('광고문구 생성'),
@@ -110,21 +105,23 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         body: Center(
-          child: Text(character),
+          child: Text(
+            character,
+            style: const TextStyle(fontSize: 40),
+          ),
         ),
       ),
     );
   }
 
-  sumStr(){
+  sumStr() {
     setState(() {
       index++;
-      if(index == str.length){
+      if (index == str.length) {
         index = 0;
         character = '';
       }
       character += str[index];
     });
   }
-
 }
