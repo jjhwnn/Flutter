@@ -30,9 +30,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // 입력받을 텍스트변수 선언
   late TextEditingController textEditingController;
+  // 글자를 하나씩 누적받을 변수
   late String character;
+  // 글자를 하나씩 저장할 배열
   late List str;
+  // 인덱스 번지
   late int index;
 
   @override
