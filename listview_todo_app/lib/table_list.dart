@@ -52,8 +52,8 @@ class _TableListState extends State<TableList> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailList(),));
                 },
                 child: Card(
-                  color: position % 2 == 0 ? Color.fromARGB(255, 9, 189, 239)
-                  : Color.fromARGB(255, 9, 236, 176),
+                  color: position % 2 == 0 ? const Color.fromARGB(255, 9, 189, 239)
+                  : const Color.fromARGB(255, 9, 236, 176),
                   child: Row(
                     children: [
                       Padding(

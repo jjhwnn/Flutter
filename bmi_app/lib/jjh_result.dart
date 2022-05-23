@@ -52,7 +52,6 @@ class _ResultState extends State<Result> {
                 BMI.resultBmi,
                 style: const TextStyle(fontSize: 80),
               ),
-          
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
