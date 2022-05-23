@@ -5,6 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+        // 생성자
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
@@ -87,7 +88,7 @@ class _HomeState extends State<Home> {
                 ),
                 Column(
                   children: [
-                    Text('전구 스위치'),
+                    const Text('전구 스위치'),
                     Switch(
                       value: _switch,
                       onChanged: (value) {
@@ -107,6 +108,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // 전구 전원 온오프
   decisionOnOff() {
     if (_switch) {
       _lampImage = 'images/lamp_on.png';
@@ -114,6 +116,8 @@ class _HomeState extends State<Home> {
       _lampImage = 'images/lamp_off.png';
     }
   }
+
+  // 전구 크기 조절
   decisionLampSize(){
     if( _lampSizeStatus =='small'){
      
