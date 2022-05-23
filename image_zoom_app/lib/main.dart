@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
   }
 
   decisionOnOff() {
-    if (_switch == true) {
+    if (_switch) {
       _lampImage = 'images/lamp_on.png';
     } else {
       _lampImage = 'images/lamp_off.png';
