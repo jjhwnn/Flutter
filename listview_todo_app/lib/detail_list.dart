@@ -15,7 +15,7 @@ class _DetailListState extends State<DetailList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail View'),
+        title: Text(Message.workList),
       ),
       body: Center(
         child: Column(
