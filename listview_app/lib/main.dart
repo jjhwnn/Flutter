@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: TabBarView(controller: controller, children: [
         FirstPage(list: animalList),
-        const SecondPage(),
+        SecondPage(list: animalList),
       ]),
       bottomNavigationBar: Container(
         color: Colors.purple,
