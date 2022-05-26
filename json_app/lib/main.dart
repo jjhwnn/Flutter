@@ -135,7 +135,8 @@ class _HomeState extends State<Home> {
 
   // -- Functions           비동기 방식
   Future<bool> getJSONData() async {
-    var url = Uri.parse('https://zeushahn.github.io/Test/student2.json');
+                                // window는 ip어드레스 적어주어야 한다***
+    var url = Uri.parse('http://localhost:8080/Flutter/student_query_flutter.jsp');
     var response = await http.get(url); // get방식을 많이사용 -> 사용 후 암호화
 
     // 화면구성이 되었을 때 setState를 사용해준다.

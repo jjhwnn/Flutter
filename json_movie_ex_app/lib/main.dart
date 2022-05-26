@@ -54,29 +54,53 @@ class _HomeState extends State<Home> {
         child: data.isEmpty
             ? const Text('데이터가 없습니다.')
             : ListView.builder(
-                itemCount: data.length,
+                itemCount: data.length ~/ 3,
                 itemBuilder: (context, index) {
                   return Row(
                     children: [
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: (){
-                              //
-                            },
-                            child: Card(
-                              color:  cardColor,
+                      SizedBox(
+                        width: 200,
+                        child: Column(
+                          children: [
+                            GestureDetector(
+                              onTap: (){
+                                //
+                              },
+                              child: Card(
+                                color:  cardColor,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Image.network(
+                                        data[index*3]['image'],
+                                        height: 100,
+                                        width: 100,
+                                      ),
+                                      Text(
+                                        data[index*3]['title'],
+                                        style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Card(
+                              color: cardColor,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
                                     Image.network(
-                                      data[index]['image'],
+                                      data[index*3+1]['image'],
                                       height: 100,
                                       width: 100,
                                     ),
                                     Text(
-                                      data[index]['title'],
+                                      data[index*3+1]['title'],
                                       style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       ),
@@ -85,33 +109,12 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                          ),
-                          Card(
-                            color: cardColor,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Image.network(
-                                    data[index]['image'],
-                                    height: 100,
-                                    width: 100,
-                                  ),
-                                  Text(
-                                    data[index]['title'],
-                                    style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 250,
-                        width: data[index]['title'].length < 5 ? 250 : 200,
+                        width: 220,
                         child: Card(
                               color:  cardColor,
                               child: Padding(
@@ -119,12 +122,12 @@ class _HomeState extends State<Home> {
                                 child: Row(
                                   children: [
                                     Image.network(
-                                      data[index]['image'],
+                                      data[index*3+2]['image'],
                                       height: 100,
                                       width: 100,
                                     ),
                                     Text(
-                                      data[index]['title'],
+                                      data[index*3+2]['title'],
                                       style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       ),
