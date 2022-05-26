@@ -135,8 +135,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     FloatingActionButton(
                       foregroundColor: Colors.black,
                       child: const Icon(Icons.arrow_back),
-                      backgr
-                      oundColor: Colors.redAccent,
+                      
+                      backgroundColor: Colors.redAccent,
                       onPressed: () {
                         controller.data!.goBack(); // 데이터가 있을수도 없을수도 있기 때문
                       }),
