@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -20,8 +18,8 @@ class Home extends StatelessWidget {
               const CircleAvatar(
                 backgroundImage: AssetImage(
                   'images/bmi.png',
-                  ),radius: 100,
-                
+                ),
+                radius: 100,
               ),
               const SizedBox(
                 height: 20,
@@ -33,7 +31,7 @@ class Home extends StatelessWidget {
                 child: const Text(
                   '측정하기>>',
                   style: TextStyle(fontSize: 50),
-                  ),
+                ),
               ),
             ],
           ),

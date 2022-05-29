@@ -52,80 +52,76 @@ class _HomeState extends State<Home> {
             : ListView.builder(
                 itemCount: data.length,
                 itemBuilder: (context, index) {
-                    return Card(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                const Text(
-                                  'Code:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                Text(
-                                      // 리스트 내에서는 Map형태로 표현되어 번호 접근X 
-                                  data[index]['code'],
+                  return Card(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              const Text(
+                                'Code:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
                                 ),
-
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Name:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                Text(
-                                  data[index]['name'],
+                              ),
+                              Text(
+                                // 리스트 내에서는 Map형태로 표현되어 번호 접근X
+                                data[index]['code'],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                'Name:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
                                 ),
-
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Dept:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                Text(
-                                  data[index]['dept'],
+                              ),
+                              Text(
+                                data[index]['name'],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                'Dept:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
                                 ),
-
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Phone:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                Text(
-                                  data[index]['phone'],
+                              ),
+                              Text(
+                                data[index]['dept'],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                'Phone:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
                                 ),
-
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                              Text(
+                                data[index]['phone'],
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
+                    ),
                   );
                 },
               ),
@@ -135,8 +131,13 @@ class _HomeState extends State<Home> {
 
   // -- Functions           비동기 방식
   Future<bool> getJSONData() async {
-                                // window는 ip어드레스 적어주어야 한다***
-    var url = Uri.parse('http://localhost:8080/Flutter/student_query_flutter.jsp');
+    // window는 ip어드레스 적어주어야 한다***
+    // Mac
+    // var url = Uri.parse('http://localhost:8080/Flutter/student_query_flutter.jsp');
+
+    // Windows
+    var url = Uri.parse(
+        'http://192.168.199.19:8080/Flutter/student_query_flutter.jsp');
     var response = await http.get(url); // get방식을 많이사용 -> 사용 후 암호화
 
     // 화면구성이 되었을 때 setState를 사용해준다.

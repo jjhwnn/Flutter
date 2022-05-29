@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigator_lamp_switch_app/update.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -41,20 +40,18 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Main 화면'),
-        // 앱바 상단 오른쪽에 위치할때 action, 왼쪽은 leading :
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const UpdatePage(imagePath: lampImage,)),
-              ).then((value) => getLamp());
-            },
-            icon: const Icon(Icons.edit)),
-        ] 
-      ),
+      appBar: AppBar(title: const Text('Main 화면'),
+          // 앱바 상단 오른쪽에 위치할때 action, 왼쪽은 leading :
+          actions: [
+            IconButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const UpdatePage(imagePath: lampImage,)),
+                  // ).then((value) => getLamp());
+                },
+                icon: const Icon(Icons.edit)),
+          ]),
       body: Center(
         child: Image.asset(
           lampImage,
@@ -65,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  getLamp(){
+  getLamp() {
     setState(() {
-     // lampImage = imagePath;
+      // lampImage = imagePath;
     });
   }
 }
