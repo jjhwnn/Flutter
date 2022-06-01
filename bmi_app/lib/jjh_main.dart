@@ -16,11 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       routes: {
-        '/' :(context) => const Home(),
-        '/bmi' :(context) => const MeasureBmi(),
-        '/result' :(context) => const Result(),
+        '/': (context) => const Home(),
+        '/bmi': (context) => const MeasureBmi(),
+        '/result': (context) => const Result(),
       },
     );
   }
 }
-
